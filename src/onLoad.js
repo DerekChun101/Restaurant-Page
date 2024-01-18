@@ -1,4 +1,5 @@
 import { loadHome } from "./home";
+import cat from './images/cat.svg'
 
 const onLoad = () => {
     const content = document.querySelector('#content');
@@ -13,7 +14,11 @@ const onLoad = () => {
     let heading = document.createElement('div');
     heading.id = 'heading';
     heading.innerText='Neko Sushi';
-    
+
+    let catSvg = document.createElement('img');
+    catSvg.src = cat;
+    catSvg.className = 'catSvg';
+
     const tabs = ['Home', 'Menu', 'Contact'];
     let tabList = document.createElement('ul');
     tabList.className = 'tabList';
@@ -26,7 +31,9 @@ const onLoad = () => {
     }
    
     header.appendChild(heading);
+    header.appendChild(catSvg);
     header.appendChild(tabList);
+    
     content.appendChild(header);
     content.appendChild(main);
     loadHome();
