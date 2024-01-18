@@ -1,19 +1,15 @@
-import sushi from './images/sushi.jpg';
+import { loadHome } from "./home";
 
 const onLoad = () => {
     const content = document.querySelector('#content');
-    let sushiImg = document.createElement('img');
-    sushiImg.src = sushi;
+   
 
     let header = document.createElement('div');
     header.className='header';
     let main = document.createElement('div');
     main.className='main';
     
-    let mainText = document.createElement('div');
-    mainText.className = 'mainText';
-    mainText.innerText = 'Welcome to Neko Sushi, home to freshest sushi! We take pride in our fresh ingredients imported daily from all around the world!'
-    
+   
     let heading = document.createElement('div');
     heading.id = 'heading';
     heading.innerText='Neko Sushi';
@@ -28,16 +24,12 @@ const onLoad = () => {
 
         tabList.appendChild(tab);
     }
-    
    
-
-    main.appendChild(mainText)
-    main.appendChild(sushiImg);
-
     header.appendChild(heading);
     header.appendChild(tabList);
     content.appendChild(header);
     content.appendChild(main);
+    loadHome();
 
     
 };

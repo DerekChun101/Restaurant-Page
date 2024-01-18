@@ -535,8 +535,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   loadMenu: () => (/* binding */ loadMenu)
 /* harmony export */ });
+
+
+
 const loadMenu = () => {
-    console.log('menu');
+
+    const main = document.querySelector('.main');
+    main.innerHTML = '';
+
+    let menuHeader = document.createElement('div');
+    menuHeader.className = 'menuHeader';
+    menuHeader.innerText =  'Menu';
+
+    main.appendChild(menuHeader);
+    
+}
+
+
+
+/***/ }),
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   loadHome: () => (/* binding */ loadHome)
+/* harmony export */ });
+/* harmony import */ var _images_sushi_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/sushi.jpg */ "./src/images/sushi.jpg");
+
+
+const loadHome = () => {
+    const main = document.querySelector('.main');
+    main.innerHTML = '';
+
+    let sushiImg = document.createElement('img');
+    sushiImg.src = _images_sushi_jpg__WEBPACK_IMPORTED_MODULE_0__;
+
+    let mainText = document.createElement('div');
+    mainText.className = 'mainText';
+    mainText.innerText = 'Welcome to Neko Sushi, home to freshest sushi! We take pride in our fresh ingredients imported daily from all around the world!'
+    
+    main.appendChild(mainText)
+    main.appendChild(sushiImg);
 }
 
 
@@ -553,23 +597,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   onLoad: () => (/* binding */ onLoad)
 /* harmony export */ });
-/* harmony import */ var _images_sushi_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/sushi.jpg */ "./src/images/sushi.jpg");
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/home.js");
 
 
 const onLoad = () => {
     const content = document.querySelector('#content');
-    let sushiImg = document.createElement('img');
-    sushiImg.src = _images_sushi_jpg__WEBPACK_IMPORTED_MODULE_0__;
+   
 
     let header = document.createElement('div');
     header.className='header';
     let main = document.createElement('div');
     main.className='main';
     
-    let mainText = document.createElement('div');
-    mainText.className = 'mainText';
-    mainText.innerText = 'Welcome to Neko Sushi, home to freshest sushi! We take pride in our fresh ingredients imported daily from all around the world!'
-    
+   
     let heading = document.createElement('div');
     heading.id = 'heading';
     heading.innerText='Neko Sushi';
@@ -584,16 +624,12 @@ const onLoad = () => {
 
         tabList.appendChild(tab);
     }
-    
    
-
-    main.appendChild(mainText)
-    main.appendChild(sushiImg);
-
     header.appendChild(heading);
     header.appendChild(tabList);
     content.appendChild(header);
     content.appendChild(main);
+    (0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)();
 
     
 };
@@ -733,6 +769,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu */ "./src/Menu.js");
 /* harmony import */ var _Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Contact */ "./src/Contact.js");
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home */ "./src/home.js");
+
 
 
 
@@ -740,6 +778,10 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_onLoad__WEBPACK_IMPORTED_MODULE_0__.onLoad)();
 
+const homeTab = document.querySelector('.Home');
+homeTab.addEventListener('click', () => {
+    (0,_home__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+}); 
 const menuTab = document.querySelector('.Menu');
 menuTab.addEventListener('click', () => {
     (0,_Menu__WEBPACK_IMPORTED_MODULE_2__.loadMenu)();
