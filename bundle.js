@@ -21,7 +21,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
     background-color: #ffb7c5;
 }
 .header {
@@ -43,10 +46,15 @@ ul {
 #heading {
     font-size: 100px;   
 }
-img {
+.catSvg {
+    height: 10vh;
+}
+.sushiImg {
     height: 50vh;
     width: auto;
 }
+
+
 .main {
     background-color:  #FFF5EE;
     margin: 5vh;
@@ -58,8 +66,13 @@ img {
 }
 .mainText {
     width: 30vw;
-    font-size: 50px;
+    font-size: 60px;
+    padding: 100px;
     
+}
+.mainText > span {
+    font-weight: bold;
+    font-size: 65px;
 }
 .menuWrapper {
     display: flex;
@@ -87,7 +100,26 @@ img {
 .subHeading {
     font-size: 30px;
 }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;AACA;;IAEI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,qBAAqB;AACzB;AACA;IACI,aAAa;IACb,OAAO;IACP,eAAe;AACnB;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,0BAA0B;IAC1B,WAAW;IACX,aAAa;IACb,aAAa;IACb,QAAQ;IACR,uBAAuB;IACvB,6CAA6C;AACjD;AACA;IACI,WAAW;IACX,eAAe;;AAEnB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;;AAE3B;AACA;;IAEI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;IACjB,qBAAqB;IACrB,UAAU;IACV,eAAe;IACf,QAAQ;AACZ;;AAEA;IACI,eAAe;AACnB","sourcesContent":["body {\n    background-color: #ffb7c5;\n}\n.header {\n    \n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 0 50px;\n}\nul {\n    list-style-type: none;\n}\n.tabList {\n    display: flex;\n    gap:2vw;\n    font-size: 40px;\n}\n\n#heading {\n    font-size: 100px;   \n}\nimg {\n    height: 50vh;\n    width: auto;\n}\n.main {\n    background-color:  #FFF5EE;\n    margin: 5vh;\n    padding: 30px;\n    display: flex;\n    gap:10vw;\n    justify-content: center;\n    box-shadow:  20px 20px 15px rgba(0, 0, 0, .4);\n}\n.mainText {\n    width: 30vw;\n    font-size: 50px;\n    \n}\n.menuWrapper {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n\n}\n.menuHeader {\n\n    font-size:50px;\n    margin-bottom: 4vh;\n}\n\n.itemList {\n    display: flex;\n    flex-direction: column;\n    align-items: left;\n    justify-content: left;\n    padding: 0;\n    font-size: 25px;\n    gap: 1vh;\n}\n\n.subHeading {\n    font-size: 30px;\n}\n"],"sourceRoot":""}]);
+.contactWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contactHeader {
+    font-size: 50px;
+    margin-bottom: 4vh;
+}
+
+.huhCat {
+    height: 200px;
+    width: auto;
+}
+
+.subHeading {
+    margin-bottom: 2vh;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,qGAAqG;AACzG;AACA;IACI,yBAAyB;AAC7B;AACA;;IAEI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,qBAAqB;AACzB;AACA;IACI,aAAa;IACb,OAAO;IACP,eAAe;AACnB;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ,WAAW;AACf;;;AAGA;IACI,0BAA0B;IAC1B,WAAW;IACX,aAAa;IACb,aAAa;IACb,QAAQ;IACR,uBAAuB;IACvB,6CAA6C;AACjD;AACA;IACI,WAAW;IACX,eAAe;IACf,cAAc;;AAElB;AACA;IACI,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;;AAE3B;AACA;;IAEI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;IACjB,qBAAqB;IACrB,UAAU;IACV,eAAe;IACf,QAAQ;AACZ;;AAEA;IACI,eAAe;AACnB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;;AAE3B;AACA;IACI,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,kBAAkB;AACtB","sourcesContent":[":root {\n    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;\n}\nbody {\n    background-color: #ffb7c5;\n}\n.header {\n    \n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 0 50px;\n}\nul {\n    list-style-type: none;\n}\n.tabList {\n    display: flex;\n    gap:2vw;\n    font-size: 40px;\n}\n\n#heading {\n    font-size: 100px;   \n}\n.catSvg {\n    height: 10vh;\n}\n.sushiImg {\n    height: 50vh;\n    width: auto;\n}\n\n\n.main {\n    background-color:  #FFF5EE;\n    margin: 5vh;\n    padding: 30px;\n    display: flex;\n    gap:10vw;\n    justify-content: center;\n    box-shadow:  20px 20px 15px rgba(0, 0, 0, .4);\n}\n.mainText {\n    width: 30vw;\n    font-size: 60px;\n    padding: 100px;\n    \n}\n.mainText > span {\n    font-weight: bold;\n    font-size: 65px;\n}\n.menuWrapper {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n\n}\n.menuHeader {\n\n    font-size:50px;\n    margin-bottom: 4vh;\n}\n\n.itemList {\n    display: flex;\n    flex-direction: column;\n    align-items: left;\n    justify-content: left;\n    padding: 0;\n    font-size: 25px;\n    gap: 1vh;\n}\n\n.subHeading {\n    font-size: 30px;\n}\n.contactWrapper {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n\n}\n.contactHeader {\n    font-size: 50px;\n    margin-bottom: 4vh;\n}\n\n.huhCat {\n    height: 200px;\n    width: auto;\n}\n\n.subHeading {\n    margin-bottom: 2vh;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -544,8 +576,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   loadContact: () => (/* binding */ loadContact)
 /* harmony export */ });
+/* harmony import */ var _images_huh_cat_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/huh_cat.jpg */ "./src/images/huh_cat.jpg");
+
+
 const loadContact = () => {
-    console.log('Contact');
+    
+    const main = document.querySelector('.main');
+    main.innerHTML = '';
+
+    let contactWrapper = document.createElement('div');
+    contactWrapper.className = 'contactWrapper';
+
+    main.appendChild(contactWrapper);
+
+    let contactHeader = document.createElement('div');
+    contactHeader.className = 'contactHeader';
+    contactHeader.innerText =  'Contact Us!';
+
+    contactWrapper.appendChild(contactHeader);
+
+    let subHeading = document.createElement('div');
+    subHeading.className = 'subHeading';
+    subHeading.innerText = 'Number: xxx-xxx-xxxx';
+
+    contactWrapper.appendChild(subHeading);
+
+    let subHeading2 = document.createElement('div');
+    subHeading2.className = 'subHeading';
+    subHeading2.innerText = 'Location: 123 Street';
+
+    contactWrapper.appendChild(subHeading2);
+
+    let subHeading3 = document.createElement('div');
+    subHeading3.className = 'subHeading';
+    subHeading3.innerText = 'Manager: ';
+    contactWrapper.appendChild(subHeading3);
+
+    let huhCatImg = document.createElement('img');
+    huhCatImg.src = _images_huh_cat_jpg__WEBPACK_IMPORTED_MODULE_0__;
+    huhCatImg.className = 'huhCat';
+    
+    contactWrapper.appendChild(huhCatImg);
 }
 
 
@@ -613,6 +684,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   loadHome: () => (/* binding */ loadHome)
 /* harmony export */ });
 /* harmony import */ var _images_sushi_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/sushi.jpg */ "./src/images/sushi.jpg");
+/* harmony import */ var _images_huh_cat_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/huh_cat.jpg */ "./src/images/huh_cat.jpg");
+
+
 
 
 const loadHome = () => {
@@ -621,10 +695,13 @@ const loadHome = () => {
 
     let sushiImg = document.createElement('img');
     sushiImg.src = _images_sushi_jpg__WEBPACK_IMPORTED_MODULE_0__;
+    sushiImg.className = 'sushiImg'
+
+    
 
     let mainText = document.createElement('div');
     mainText.className = 'mainText';
-    mainText.innerText = 'Welcome to Neko Sushi, home to freshest sushi! We take pride in our fresh ingredients imported daily from all around the world!'
+    mainText.innerHTML = '<span>Welcome to Neko Sushi</span>, home to freshest sushi!\n We take pride in our fresh ingredients imported daily from all around the world!'
     
     main.appendChild(mainText)
     main.appendChild(sushiImg);
@@ -645,6 +722,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   onLoad: () => (/* binding */ onLoad)
 /* harmony export */ });
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/home.js");
+/* harmony import */ var _images_cat_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/cat.svg */ "./src/images/cat.svg");
+
 
 
 const onLoad = () => {
@@ -660,7 +739,11 @@ const onLoad = () => {
     let heading = document.createElement('div');
     heading.id = 'heading';
     heading.innerText='Neko Sushi';
-    
+
+    let catSvg = document.createElement('img');
+    catSvg.src = _images_cat_svg__WEBPACK_IMPORTED_MODULE_1__;
+    catSvg.className = 'catSvg';
+
     const tabs = ['Home', 'Menu', 'Contact'];
     let tabList = document.createElement('ul');
     tabList.className = 'tabList';
@@ -673,7 +756,9 @@ const onLoad = () => {
     }
    
     header.appendChild(heading);
+    header.appendChild(catSvg);
     header.appendChild(tabList);
+    
     content.appendChild(header);
     content.appendChild(main);
     (0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)();
@@ -684,6 +769,26 @@ const onLoad = () => {
 
 
 
+
+/***/ }),
+
+/***/ "./src/images/cat.svg":
+/*!****************************!*\
+  !*** ./src/images/cat.svg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "cat.svg";
+
+/***/ }),
+
+/***/ "./src/images/huh_cat.jpg":
+/*!********************************!*\
+  !*** ./src/images/huh_cat.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "huh_cat.jpg";
 
 /***/ }),
 
