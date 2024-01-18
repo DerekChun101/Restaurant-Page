@@ -60,7 +60,34 @@ img {
     width: 30vw;
     font-size: 50px;
     
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;AACA;;IAEI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,qBAAqB;AACzB;AACA;IACI,aAAa;IACb,OAAO;IACP,eAAe;AACnB;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,0BAA0B;IAC1B,WAAW;IACX,aAAa;IACb,aAAa;IACb,QAAQ;IACR,uBAAuB;IACvB,6CAA6C;AACjD;AACA;IACI,WAAW;IACX,eAAe;;AAEnB","sourcesContent":["body {\n    background-color: #ffb7c5;\n}\n.header {\n    \n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 0 50px;\n}\nul {\n    list-style-type: none;\n}\n.tabList {\n    display: flex;\n    gap:2vw;\n    font-size: 40px;\n}\n\n#heading {\n    font-size: 100px;   \n}\nimg {\n    height: 50vh;\n    width: auto;\n}\n.main {\n    background-color:  #FFF5EE;\n    margin: 5vh;\n    padding: 30px;\n    display: flex;\n    gap:10vw;\n    justify-content: center;\n    box-shadow:  20px 20px 15px rgba(0, 0, 0, .4);\n}\n.mainText {\n    width: 30vw;\n    font-size: 50px;\n    \n}"],"sourceRoot":""}]);
+}
+.menuWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.menuHeader {
+
+    font-size:50px;
+    margin-bottom: 4vh;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 0;
+    font-size: 25px;
+    gap: 1vh;
+}
+
+.subHeading {
+    font-size: 30px;
+}
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;AACA;;IAEI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,qBAAqB;AACzB;AACA;IACI,aAAa;IACb,OAAO;IACP,eAAe;AACnB;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,0BAA0B;IAC1B,WAAW;IACX,aAAa;IACb,aAAa;IACb,QAAQ;IACR,uBAAuB;IACvB,6CAA6C;AACjD;AACA;IACI,WAAW;IACX,eAAe;;AAEnB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;;AAE3B;AACA;;IAEI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;IACjB,qBAAqB;IACrB,UAAU;IACV,eAAe;IACf,QAAQ;AACZ;;AAEA;IACI,eAAe;AACnB","sourcesContent":["body {\n    background-color: #ffb7c5;\n}\n.header {\n    \n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 0 50px;\n}\nul {\n    list-style-type: none;\n}\n.tabList {\n    display: flex;\n    gap:2vw;\n    font-size: 40px;\n}\n\n#heading {\n    font-size: 100px;   \n}\nimg {\n    height: 50vh;\n    width: auto;\n}\n.main {\n    background-color:  #FFF5EE;\n    margin: 5vh;\n    padding: 30px;\n    display: flex;\n    gap:10vw;\n    justify-content: center;\n    box-shadow:  20px 20px 15px rgba(0, 0, 0, .4);\n}\n.mainText {\n    width: 30vw;\n    font-size: 50px;\n    \n}\n.menuWrapper {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n\n}\n.menuHeader {\n\n    font-size:50px;\n    margin-bottom: 4vh;\n}\n\n.itemList {\n    display: flex;\n    flex-direction: column;\n    align-items: left;\n    justify-content: left;\n    padding: 0;\n    font-size: 25px;\n    gap: 1vh;\n}\n\n.subHeading {\n    font-size: 30px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -536,18 +563,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   loadMenu: () => (/* binding */ loadMenu)
 /* harmony export */ });
 
-
-
 const loadMenu = () => {
 
     const main = document.querySelector('.main');
     main.innerHTML = '';
+    let menuWrapper = document.createElement('div');
+    menuWrapper.className= 'menuWrapper';
+
+    main.appendChild(menuWrapper);
 
     let menuHeader = document.createElement('div');
     menuHeader.className = 'menuHeader';
     menuHeader.innerText =  'Menu';
 
-    main.appendChild(menuHeader);
+    menuWrapper.appendChild(menuHeader);
+
+    let subHeading = document.createElement('div');
+    subHeading.className = 'subHeading';
+    subHeading.innerText = 'Sushi A La Carte';
+
+    menuWrapper.appendChild(subHeading);
+
+    const items = ['Salmon', 'Otoro', 'Uni', 'Tuna', 'Lobster']
+    let itemList = document.createElement('ul')
+    itemList.className = 'itemList';
+    for(let i = 0; i < items.length; i++) {
+        let item = document.createElement('li');
+        item.classList = 'item';
+        item.appendChild(document.createTextNode(items[i]));
+
+        itemList.appendChild(item);
+    }
+    menuWrapper.appendChild(itemList);
     
 }
 
@@ -782,6 +829,7 @@ const homeTab = document.querySelector('.Home');
 homeTab.addEventListener('click', () => {
     (0,_home__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
 }); 
+
 const menuTab = document.querySelector('.Menu');
 menuTab.addEventListener('click', () => {
     (0,_Menu__WEBPACK_IMPORTED_MODULE_2__.loadMenu)();
