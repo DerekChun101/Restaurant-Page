@@ -10,6 +10,7 @@ const homeTab = document.querySelector('.Home');
 homeTab.addEventListener('click', () => {
     loadHome();
 }); 
+
 const menuTab = document.querySelector('.Menu');
 menuTab.addEventListener('click', () => {
     loadMenu();
