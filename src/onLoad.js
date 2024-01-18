@@ -23,6 +23,7 @@ const onLoad = () => {
     tabList.className = 'tabList';
     for(let i = 0; i<tabs.length; i++) {
         let tab = document.createElement('li');
+        tab.className = tabs[i];
         tab.appendChild(document.createTextNode(tabs[i]));
 
         tabList.appendChild(tab);
